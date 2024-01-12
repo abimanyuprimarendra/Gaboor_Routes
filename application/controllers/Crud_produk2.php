@@ -31,7 +31,7 @@ class Crud_produk extends CI_Controller {
         if($this->db->affected_rows()){
             redirect('Crud_produk2');
         } else {
-            redirect('Crud_produk2/tambah_produk');
+            redirect('Crud_produk2/tambah_produk2');
         }
     }
 

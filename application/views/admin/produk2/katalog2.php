@@ -43,7 +43,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?php echo site_url('Crud_produk');?>">
+                <a class="nav-link" href="<?php echo site_url('Crud_produk2');?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard Destinasi</span></a>
             </li>

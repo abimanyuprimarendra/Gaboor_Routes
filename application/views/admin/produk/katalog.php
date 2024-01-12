@@ -58,7 +58,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php base_url(); ?>admin/produk2/katalog2">
+                <a class="nav-link" href="<?= base_url(); ?>admin/produk2/katalog2">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Paket_destinasi</span></a>
             </li>

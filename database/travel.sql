@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Jan 2024 pada 22.16
+-- Waktu pembuatan: 12 Jan 2024 pada 09.33
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -41,12 +41,20 @@ CREATE TABLE `pelanggan` (
 --
 
 CREATE TABLE `pemesanan` (
-  `id_pemesanan` varchar(20) NOT NULL,
-  `tanggal_pemesanan` date DEFAULT NULL,
-  `jumlah_orang` int(11) DEFAULT NULL,
-  `total_biaya` char(20) DEFAULT NULL,
-  `status_pemesanan` enum('pending','dikonfirmasi','selesai') DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `nama` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `paket` varchar(200) NOT NULL,
+  `NoHp` varchar(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `pemesanan`
+--
+
+INSERT INTO `pemesanan` (`id`, `nama`, `email`, `paket`, `NoHp`) VALUES
+(1, 'Abimanyu', 'aswincenglu575@gmail.com', 'Ekspedisi Jawa : Rp.7.499.000,-', '082223633439'),
+(2, 'Niko', 'abimprima02@gmail.com', 'Explore Nusantara : Rp.4.500.000,-', '082223633439');
 
 -- --------------------------------------------------------
 
@@ -129,7 +137,7 @@ ALTER TABLE `pelanggan`
 -- Indeks untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  ADD PRIMARY KEY (`id_pemesanan`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tbl_admin`
@@ -152,6 +160,12 @@ ALTER TABLE `tb_paket`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `pemesanan`
+--
+ALTER TABLE `pemesanan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_admin`

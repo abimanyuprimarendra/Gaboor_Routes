@@ -49,9 +49,6 @@
 <body>
 
 <div class="container">
-    <div class="brand">
-        <span class="text-muted">Nama Web</span>
-    </div>
     <div class="form-container">
         <div class="row justify-content-center">
             <div class="col-md-6">
